@@ -29,12 +29,9 @@ printf "Copyright: 2022 WhiteBlackGoose\n" >> ./debian/copyright
 printf "License: CC0" >> ./debian/copyright
 
 # rules
-printf "#!/bin/bash\n" > ./debian/rules
-printf "dotnet publish -o=. -c release -r linux-x64 -p:SelfContained=true -p:PublishSingleFile=true -p:PublishTrimmed=true -p:TrimMode=link\n" >> ./debian/rules
-printf "mv HelloWorld hello-world\n" >> ./debian/rules
-printf "rm HelloWorld.pdb\n" >> ./debian/rules
-printf "rm -r ./bin\n" >> ./debian/rules
-printf "rm -r ./obj\n" >> ./debian/rules
+printf "#!/usr/bin/make -f\n" > ./debian/rules
+printf "%:\n" >> ./debian/rules
+printf "	dh $@" >> ./debian/rules
 
 # source/format
 mkdir ./debian/source

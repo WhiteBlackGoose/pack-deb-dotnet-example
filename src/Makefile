@@ -1,7 +1,7 @@
 prefix = /usr/local
 
 all:
-	./build.sh
+	./build.sh .
 
 install:
 	install hello-world $(DESTDIR)$(prefix)/bin

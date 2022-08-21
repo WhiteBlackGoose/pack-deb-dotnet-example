@@ -1,6 +1,6 @@
 #!/bin/bash
 dotnet publish \
--o=. \
+-o=$1 \
 -c release \
 -r linux-x64 \
 -p:SelfContained=true \

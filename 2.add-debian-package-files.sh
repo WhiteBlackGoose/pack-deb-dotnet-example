@@ -30,8 +30,14 @@ printf "License: CC0" >> ./debian/copyright
 
 # rules
 printf "#!/usr/bin/make -f\n" > ./debian/rules
-printf "%:\n" >> ./debian/rules
-printf "	dh $@" >> ./debian/rules
+echo '%:' >> ./debian/rules
+echo '	dh $@' >> ./debian/rules
+printf "\n" >> ./debian/rules
+printf "override_dh_auto_install:\n" >> ./debian/rules
+echo '	$(MAKE) DESTDIR=$$(pwd)/debian/hello-world prefix=/usr install' >> ./debian/rules
+
+# hello-world.dirs
+echo 'usr/bin' > ./debian/hello-world.dirs
 
 # source/format
 mkdir ./debian/source

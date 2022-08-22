@@ -8,6 +8,6 @@ dotnet publish \
 -p:PublishTrimmed=true \
 -p:TrimMode=link
 mv HelloWorld hello-world
-rm HelloWorld.pdb
-rm -r ./bin
-rm -r ./obj
+# rm HelloWorld.pdb
+# rm -r ./bin
+# rm -r ./obj

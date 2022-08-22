@@ -18,6 +18,7 @@ printf "Section: misc\n" >> ./debian/control
 printf "Priority: optional\n" >> ./debian/control
 printf "Standards-Version: 3.9.2\n" >> ./debian/control
 # printf "Build-Depends: dotnet6\n" >> ./debian/control
+printf "Build-Depends: debhelper (>= 9)\n" >> ./debian/control
 printf "\n" >> ./debian/control
 printf "Package: hello-world\n" >> ./debian/control
 printf "Architecture: any\n" >> ./debian/control

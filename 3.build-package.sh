@@ -6,4 +6,4 @@ cd output/src
 # debuild -us -uc --check-option="--no-lintian"
 # debuild -us
 
-debuild --check-option="--no-lintian"
+debuild

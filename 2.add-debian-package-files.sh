@@ -6,7 +6,7 @@ cd output/src
 rm -r debian
 rm -r hello-world
 mkdir debian
-dch --create -v 1.0 --package hello-world
+dch --create -v 1.0-www --package hello-world
 
 # compat
 echo "10" > ./debian/compat
